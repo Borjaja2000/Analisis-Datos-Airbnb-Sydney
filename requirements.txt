@@ -3,6 +3,5 @@ pandas
 plotly
 matplotlib
 folium
-FastMarkerCluster
 html
 st_folium
