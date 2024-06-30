@@ -249,7 +249,7 @@ elif pestaña == "Importancia del Vecindario":
         fig.update_layout(legend=dict(orientation="h", y=1.06, x=0, xanchor='left'))
         st.plotly_chart(fig, use_container_width=True)
     with tabsVecindario[2]:
-        calendar_data = pd.read_csv("Recursos/calendar.csv", low_memory=False, compression="gzip")
+        calendar_data = pd.read_csv("Recursos/calendar.csv", compression="gzip")
         calendar_data = pd.merge(listings, calendar_data, left_on="id", right_on="listing_id", how="left")
         calendar_data = calendar_data.groupby(["neighbourhood", "date"])["available"].value_counts().unstack()
         calendar_data["available_ratio"] = np.round(calendar_data["t"] / (calendar_data["t"] + calendar_data["f"]) * 100, 2)
