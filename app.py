@@ -12,7 +12,7 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Airbnb Sydney", page_icon=":house:",layout="wide") #configuración de la página
 
 #Cargar datos
-listings = pd.read_csv("recursos/listings_clean.csv")
+listings = pd.read_csv("recursos/listings_clean.csv", low_memory=False)
 
 #Funciones
 #Función para limpiar los outliers
