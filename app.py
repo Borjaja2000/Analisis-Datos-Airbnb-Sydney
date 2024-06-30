@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import matplotlib.pyplot as plt
-import os
+
 import folium
 from folium.plugins import FastMarkerCluster
 from streamlit_folium import st_folium
@@ -11,12 +11,8 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Airbnb Sydney", page_icon=":house:",layout="wide") #configuración de la página
 
-file_path = "recursos/listings_clean.csv"
-if os.path.exists(file_path):
-    listings = pd.read_csv(file_path)
-else:
-    st.error(f"El archivo {file_path} no se encuentra. Por favor verifica la ruta y vuelve a intentarlo.")
-
+#Cargar datos
+listings = pd.read_csv(r"recursos/listings_clean.csv")
 
 #Funciones
 #Función para limpiar los outliers
