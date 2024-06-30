@@ -4,4 +4,3 @@ plotly
 numpy
 matplotlib
 folium
-st_folium
