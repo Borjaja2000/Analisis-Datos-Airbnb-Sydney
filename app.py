@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import folium
 from folium.plugins import FastMarkerCluster
 from streamlit_folium import st_folium
-from streamlit.components.v1 import html
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Airbnb Sydney", page_icon=":house:",layout="wide") #configuración de la página
 
@@ -307,4 +307,4 @@ elif pestaña == "Importancia del rating":
     codigo_iframe = '''<iframe title="Panel_Rating_AirBnB" width="1320" height="1240"
     src="https://app.powerbi.com/view?r=eyJrIjoiNTQzNzU5MmQtNjc0Zi00ZTA4LWEwMjktZmQ5MTYwMjA5ODRmIiwidCI6IjhhZWJkZGI2LTM0MTgtNDNhMS1hMjU1LWI5NjQxODZlY2M2NCIsImMiOjl9"
     frameborder="0" allowFullScreen="true"></iframe>'''
-    html(codigo_iframe, width=1320, height=1250)
+    components.html(codigo_iframe, width=1320, height=1250)
