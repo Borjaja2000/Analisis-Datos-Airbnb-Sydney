@@ -5,4 +5,4 @@ numpy==2.0.0
 matplotlib==3.9.0
 folium==0.17.0
 streamlit-folium==0.21.0
-vaex=
+vaex
