@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import folium
 from folium.plugins import FastMarkerCluster
 from streamlit_folium import st_folium
-import geopandas as gpd
 from streamlit.components.v1 import html
 
 st.set_page_config(page_title="Airbnb Sydney", page_icon=":house:",layout="wide") #configuración de la página
